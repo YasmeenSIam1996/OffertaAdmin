@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/marginUserDataHor"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="@dimen/marginUserDataHor"
+    android:layoutDirection="rtl"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgProduct"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/img_product_bg" />
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@id/tvPQuantity"
+            android:layout_toEndOf="@id/imgProduct"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvPName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="اسم المنتج"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/titleTextSize" />
+
+            <TextView
+                android:id="@+id/tvPID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="رقم المنتج"
+                android:textColor="@color/textColorOrderDetails" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:id="@+id/layoutPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvPPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="44"
+
+                android:textColor="@color/colorAccent"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SAR"
+                android:textColor="#DEE2E5"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvPQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/layoutPrice"
+            android:layout_alignBottom="@id/layoutPrice"
+            android:layout_marginEnd="4dp"
+            android:layout_toStartOf="@id/layoutPrice"
+            android:gravity="center"
+            android:text="X2"
+            android:textSize="17sp" />
+        <!--<View-->
+        <!---->
+        <!--style="@style/DividerStyleOrderDetails"-->
+        <!--android:layout_below="@id/layoutPrice" />-->
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/dividerItemProduct"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dividerSize"
+        android:layout_below="@id/layoutPrice"
+        android:layout_marginTop="8dp"
+        android:background="@color/dividerGreyOrderDetails" />
+
+</LinearLayout>

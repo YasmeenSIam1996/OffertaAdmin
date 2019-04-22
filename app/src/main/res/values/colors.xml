@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#303133</color>
+    <color name="colorPrimaryDark">#303133</color>
+    <color name="colorAccent">#00C8AA</color>
+
+    <color name="greyLayoutBg">#F5F5F5</color>
+    <color name="ItemColorTextTable">#052F41</color>
+    <color name="redDenied">#FF0022</color>
+    <color name="hintColorDialog">#40000000</color>
+    <color name="userDataTitleColor">#969696</color>
+    <color name="userDataSubTitleColor">#18181A</color>
+    <color name="greyOrderDetailsBg">#FAFAFA</color>
+    <color name="textColorOrderDetails">#111111</color>
+    <color name="dividerGreyOrderDetails">#DDDDDD</color>
+    <color name="redOrderDetails">#C31515</color>
+    <color name="colorFilterDialog">#2e2e2e</color>
+
+</resources>

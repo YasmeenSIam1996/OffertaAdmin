@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/layoutDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/dialog_filter_bg"
+        android:orientation="vertical"
+        android:paddingStart="15dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="18dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:id="@+id/tvFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/layoutFrom"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="10dp"
+                android:text="@string/from"
+                android:textColor="@color/colorAccent"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:id="@+id/layoutFrom"
+                style="@style/LayoutDateStyle"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/dash"
+                android:background="@drawable/start_date_bg">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_schedule_white" />
+
+                <TextView
+                    android:id="@+id/tvCalFrom"
+                    style="@style/TextDateStyle"
+                    android:text="today"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+
+            <FrameLayout
+                android:id="@+id/dash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/layoutFrom"
+                android:layout_alignBottom="@id/layoutFrom"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp">
+
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center"
+                    android:background="#85000000" />
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layoutTo"
+                style="@style/LayoutDateStyle"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@id/dash"
+                android:background="@drawable/end_date_bg">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_schedule_black" />
+
+                <TextView
+                    android:id="@+id/tvCalTo"
+                    style="@style/TextDateStyle"
+                    android:text="today" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/layoutTo"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="10dp"
+                android:text="@string/to"
+                android:textColor="@color/colorAccent"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/orderState"
+            android:textColor="#40000000"
+            android:textSize="@dimen/dialogTextSize" />
+
+        <TextView
+            android:id="@+id/tvStates"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/spinner_bg"
+            android:clickable="true"
+            android:drawableEnd="@drawable/ic_arrow_drop_down"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/spinnerPadding"
+            android:paddingEnd="@dimen/spinnerPadding"
+            android:text="@string/chooseState"
+            android:textColor="@color/hintColorDialog"
+            android:textSize="@dimen/dialogTextSize"
+            tools:ignore="UnusedAttribute" />
+
+        <Button
+            android:id="@+id/btnFilter"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btnHeight"
+            android:layout_marginTop="36dp"
+            android:background="@color/colorAccent"
+            android:text="@string/filterResults"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/titleTextSize" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvCloseDialog"
+        style="@style/TvCloseDialog"
+        android:layout_below="@+id/layoutDialog"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:text="@string/close" />
+
+    <FrameLayout
+        android:id="@+id/layoutProgress"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/layoutDialog"
+        android:layout_alignTop="@id/layoutDialog"
+        android:layout_alignEnd="@id/layoutDialog"
+        android:layout_alignBottom="@id/layoutDialog"
+        android:background="@drawable/dialog_filter_bg">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/filter_title_bg"
+        android:drawableStart="@drawable/ic_filter"
+        android:drawablePadding="4dp"
+        android:paddingStart="@dimen/marginTitleDialogHor"
+        android:paddingTop="@dimen/marginTitleDialogVer"
+        android:paddingEnd="@dimen/marginTitleDialogHor"
+        android:paddingBottom="@dimen/marginTitleDialogVer"
+        android:text="@string/filter"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/titleTextSize" />
+
+</RelativeLayout>

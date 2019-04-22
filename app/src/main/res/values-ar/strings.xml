@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Offerta Admin</string>
+    <string name="print">طباعة</string>
+    <string name="status">الحالة</string>
+    <string name="username">اسم المستخدم</string>
+    <string name="date">التاريخ</string>
+
+    <!--dialog filter results-->
+    <string name="close">اغلاق</string>
+    <string name="orderState">حالة الطلب</string>
+    <string name="chooseState">اختر الحالة</string>
+    <string name="filterResults">فلتر النتائج</string>
+    <string name="from">من</string>
+    <string name="to">إلى</string>
+    <string name="filter">فلترة</string>
+    <string name="checkConnection">تأكد من الاتصال بالانترنت!</string>
+
+</resources>

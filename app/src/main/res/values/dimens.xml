@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="btnHeight">50dp</dimen>
+    <dimen name="textMarginVerTable">12dp</dimen>
+    <dimen name="TableTextSize">12sp</dimen>
+    <dimen name="marginTitleDialogHor">25dp</dimen>
+    <dimen name="marginTitleDialogVer">7dp</dimen>
+    <dimen name="titleTextSize">16sp</dimen>
+    <dimen name="dialogTextSize">15sp</dimen>
+    <dimen name="spinnerPadding">12dp</dimen>
+    <dimen name="marginUserDataHor">20dp</dimen>
+    <dimen name="marginItemUserData">16dp</dimen>
+    <dimen name="userDataTextSize">12sp</dimen>
+    <dimen name="marginDivider">8dp</dimen>
+    <dimen name="marginTextValueHor">8dp</dimen>
+    <dimen name="dividerSize">1dp</dimen>
+
+</resources>

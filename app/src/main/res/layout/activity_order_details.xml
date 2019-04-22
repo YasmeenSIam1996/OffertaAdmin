@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".OrderDetailsActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="تفاصيل الطلب"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imgBackOrderDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_back" />
+
+
+            <ImageView
+                android:id="@+id/printImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/ic_print_white" />
+
+        </RelativeLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/layoutDetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+       >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/greyOrderDetailsBg"
+                android:paddingStart="@dimen/marginUserDataHor"
+                android:paddingTop="14dp"
+                android:paddingEnd="@dimen/marginUserDataHor"
+                android:paddingBottom="8dp">
+
+                <LinearLayout
+                    android:id="@+id/layoutUsername"
+                    style="@style/ItemUserDataStyle"
+                    android:layout_alignParentStart="true">
+
+                    <TextView
+                        style="@style/UserDataTitleStyle"
+                        android:text="صاحب الطلب" />
+
+                    <TextView
+                        android:id="@+id/tvUserName"
+                        style="@style/UserDataSubTitleStyle"
+                        android:text="أحمد اسماعيل" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutMobile"
+                    style="@style/ItemUserDataStyle"
+                    android:layout_toEndOf="@id/layoutUsername">
+
+                    <TextView
+                        style="@style/UserDataTitleStyle"
+                        android:text="رقم جوال" />
+
+                    <TextView
+                        android:id="@+id/tvUserPhone1"
+                        style="@style/UserDataSubTitleStyle"
+                        android:layoutDirection="ltr"
+                        android:text="00972597716361" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/ItemUserDataStyle"
+                    android:layout_toEndOf="@id/layoutMobile">
+
+                    <TextView
+                        style="@style/UserDataTitleStyle"
+                        android:text="رقم جوال (إضافي)" />
+
+                    <TextView
+                        android:id="@+id/tvUserPhone2"
+                        style="@style/UserDataSubTitleStyle"
+                        android:layoutDirection="ltr"
+                        android:text="00972597716361" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvAddressTitle"
+                    style="@style/UserDataTitleStyle"
+                    android:layout_below="@id/layoutUsername"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="10dp"
+                    android:text="عنوان التوصيل" />
+
+
+                <TextView
+                    android:id="@+id/tvDestination"
+                    style="@style/UserDataSubTitleStyle"
+                    android:layout_below="@id/tvAddressTitle"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="0dp"
+                    android:text="المملكة العربية السعودية , شارع أحمد بن بسام" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginUserDataHor"
+                android:layout_marginTop="@dimen/marginUserDataHor"
+                android:layout_marginEnd="@dimen/marginUserDataHor">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="طريقة الدفع"
+                    android:textColor="@color/textColorOrderDetails" />
+
+                <TextView
+                    android:id="@+id/tvPayment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="8dp"
+                    android:text="طريقة الدفع"
+                    android:textColor="@color/colorAccent" />
+            </RelativeLayout>
+
+            <View style="@style/DividerStyleOrderDetails" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginUserDataHor"
+                android:layout_marginEnd="@dimen/marginUserDataHor">
+
+                <TextView
+                    style="@style/OrderDetailsTextStyle"
+                    android:text="تاريخ الطلب" />
+
+                <TextView
+                    android:id="@+id/tvOrderDate"
+                    style="@style/TextValueStyle"
+                    android:layoutDirection="ltr"
+                    android:text="12/12/2020" />
+            </RelativeLayout>
+
+            <View style="@style/DividerStyleOrderDetails" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginUserDataHor"
+                android:layout_marginEnd="@dimen/marginUserDataHor">
+
+                <TextView
+                    style="@style/OrderDetailsTextStyle"
+                    android:text="سعر المنتجات" />
+
+                <TextView
+                    android:id="@+id/tvOrderPrice"
+                    style="@style/TextValueStyle"
+                    android:text="300" />
+            </RelativeLayout>
+
+            <View style="@style/DividerStyleOrderDetails" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginUserDataHor"
+                android:layout_marginEnd="@dimen/marginUserDataHor">
+
+                <TextView
+                    style="@style/OrderDetailsTextStyle"
+                    android:text="سعر التوصيل" />
+
+                <TextView
+                    android:id="@+id/tvShippingPrice"
+                    style="@style/TextValueStyle"
+                    android:text="300" />
+            </RelativeLayout>
+
+
+            <View style="@style/DividerStyleOrderDetails" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginUserDataHor"
+                android:layout_marginEnd="@dimen/marginUserDataHor">
+
+                <TextView
+                    style="@style/OrderDetailsTextStyle"
+                    android:text="الكوبون" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/marginTextValueHor"
+                    android:layoutDirection="ltr"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvCopoun"
+                        style="@style/TextValueStyle"
+                        android:layout_marginEnd="0dp"
+                        android:text="300"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvDiscountCopoun"
+                        style="@style/TextValueStyle"
+                        android:layout_marginEnd="0dp"
+                        android:text=" (-50%)"
+                        android:textColor="@color/redOrderDetails"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View style="@style/DividerStyleOrderDetails" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginUserDataHor"
+                android:layout_marginEnd="@dimen/marginUserDataHor">
+
+                <TextView
+                    style="@style/OrderDetailsTextStyle"
+                    android:text="نسبة الخصم على المنتج" />
+
+                <TextView
+                    android:id="@+id/tvDiscount"
+                    style="@style/TextValueStyle"
+                    android:layoutDirection="ltr"
+                    android:text="-50%"
+                    android:textColor="@color/redOrderDetails"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+            <View style="@style/DividerStyleOrderDetails" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginUserDataHor"
+                android:layout_marginEnd="@dimen/marginUserDataHor"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    style="@style/OrderDetailsTextStyle"
+                    android:text="الإجمالي (الريال السعودي)"
+                    android:textColor="@color/colorAccent" />
+
+                <TextView
+                    android:id="@+id/tvTotalPrice"
+                    style="@style/TextValueStyle"
+                    android:text="300"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/OrderDetailsTextStyle"
+                android:layout_width="match_parent"
+                android:background="@color/greyOrderDetailsBg"
+                android:paddingStart="@dimen/marginUserDataHor"
+                android:paddingTop="14dp"
+                android:paddingEnd="@dimen/marginUserDataHor"
+                android:paddingBottom="14dp"
+                android:text="قائمة المنتجات"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvProducts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/loadingDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+</LinearLayout>
+
